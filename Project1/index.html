@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sasta Swiggy</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #login-panel{
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <fieldset>
-        <legend>Sasta Swiggy Login Page</legend>
+    <fieldset id="login-panel">
+        <legend style="color: brown;">Sasta Swiggy Login Page</legend>
         <label for="gmail">Username:</label>
         <input type="gmail" id="gmail" placeholder="Enter Gmail..">
         <br/><br/>
@@ -16,7 +26,7 @@
     </fieldset>
     <br/>
         <fieldset>
-            <legend>Sasta Swiggy Food Review</legend>
+            <legend style="color: orange;">Sasta Swiggy Food Review</legend>
             <label for="name">Name:</label>
             <input type="text" id="name">
             <br/><br/>
