@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <br/><br/>
+        <label for="email">Email: </label>
+        <input type="email" id="email">
+        <br/><br/>
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone">
+        <br/><br/>
+        <label for="resume">Resume: </label>
+        <input type="file" id="resume">
+        <br/> <br/>
+        <label for="exp">Experience: </label>
+        <input type="number" id="exp" min="0" max="50">
+        <br/><br/>
+        <fieldset>
+            <legend>Skills</legend>
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+            <br/><br/>
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+            <br/><br/>
+            <input type="checkbox" id="js">
+            <label for="js">JavaScript</label>
+        </fieldset>
+        <br/><br>
+        <label for="education">Highest Education: </label>
+        <select name="education" id="education">
+            <option value="">--select--</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Master's">Master's</option>
+            <option value="Phd">Phd</option>
+        </select>
+        <br/><br/>
+        <fieldset>
+            <legend>Availability</legend>
+            <input type="radio" id="full" name="availability">
+            <label for="full">Full Time</label>
+            <br/><br/>
+            <input type="radio" id="part" name="availability">
+            <label for="part">Part Time</label>
+        </fieldset>
+        <br/><br/>
+        <label for="comments">Additional Comments:</label>
+        <br/>
+        <textarea name="comments" id="comments" rows="8" cols="20"></textarea>
+    </form>
+</body>
+</html>
