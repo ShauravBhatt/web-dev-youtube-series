@@ -1,5 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+.innerbox{
+    padding: 15px 35px 15px 35px;
+    background-color: #ffffff93;
+    backdrop-filter: blur(8px);
+    border-left: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    box-shadow: 5px 5px 5px grey ;
+    z-index: index 9;;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 2px;
+}
+#heading{
+    color: rgb(62, 60, 60);
+}
+input{
+    height: 35px;
+    width: 275px;
+    padding: 5px;
+    font-size: 14.5px;
+}
+label{
+    font-size: 18px;
+    font-weight: 700;
+}
+#Submitbutton{
+    border: none;
+    border-radius: 5px;
+    font-size: 16px ;
+    color: white;
+    background-color: rgba(0, 140, 255, 0.977);
+    cursor:pointer;
+}
+#Submitbutton:hover{
+    background-color: rgba(0, 114, 207, 0.977);
+}
+a{
+    text-decoration: none;
+}
+#lastheading{
+    margin-top: 5px;
+    text-align: center;
+}
+.circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176, 229, 208, 0.685) 42%, rgba(92, 201, 238, 0.11) 93.6% );
+}
+
+#c1{
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+}
+#c2{
+    bottom: 50px;
+    right:100px;
+    z-index: -2;
+}
+#c3{
+    top: 50px;
+    right: 100px;
+    z-index: -3;
+}
+#c4{
+    bottom: 50px;
+    left:100px;
+    z-index: -4;
 }
