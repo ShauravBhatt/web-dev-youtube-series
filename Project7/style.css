@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#panel{
+    text-align: center;
+    font-family: 'Bitter', serif;
+    background-color: rgb(247, 235, 235);
+    border: double rgb(145, 1, 248);
+}
+#navigation{
+    display: inline;
+}
+summary{
+    padding: 4px;
+    width: 100px;
+    background-color: #eeeeee;
+    border:solid 1px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+}
+#p1{
+    font-size: larger;
+    font-weight: 800;
+    padding: 10px;
+}
+#table2,#table3{
+    display: inline-block;
+    margin: 7px;
+}
+.TextRecipe{
+    font-size: large;
+}
+.fieldset1{
+    padding: 10px;
+    padding-left: 30px;
+    margin: 7px;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    display: inline;
+}
+#breakfast{
+    background-color: #dffac3ca;
+    height: 2400px;
+}
+#top{
+    background-color: rgba(161, 237, 240, 0.722);
+}
+#Lunch{
+    background-color: rgba(255, 255, 175, 0.64);
+    height: 2570px;
+}
+#Dinner{
+    background-color: #f5f5dc;
+    height: 2525px;
+}
+h2{
+    font-family: 'Ysabeau SC', sans-serif; 
+}
+h3{
+    font-family: 'Lobster', cursive;
+}
+.end{
+    height: 370px;
+    background-color: rgba(169, 169, 169, 0.311);
+}
+#Review{
+    margin-left: 5px;
+    padding: 20px;
+}
+#REVIEW1{
+    display: inline-block;
+}
+#set{
+    /* display: inline; */
+    position: relative;
+    left: 500px;
+    bottom: 350px;
+    padding: 13px;
+}
+#maps{
+    background-color: rgba(250, 235, 215, 0.854);
+    padding: 10px;
+}
+#foot{
+    height: 67px;
+    background-color: rgba(222, 184, 135, 0.724);
+    padding: 5px;
+}
