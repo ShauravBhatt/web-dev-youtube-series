@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  overflow-x: hidden;
+}
+
+.wrapper2 {
+  height: 100vh;
+  width: 101vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  gap: 20px;
+  width: 396px;
+  height: 600px;
+  border: solid 4px black;
+  border-radius: 15px;
+}
+.card2 img {
+  width: 396px;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card2 p {
+  font-size: 20px;
+}
+.bar1 {
+  display: flex;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 330px;
+  border-radius: 10px;
+}
+.bar1 img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+.bar1 p {
+  font-size: 16px;
+}
+.left {
+  display: flex;
+  flex-direction: left;
+  align-items: center;
+  gap: 10px;
+}
+.bar1 a {
+  text-decoration: none;
+  color: purple;
+}
+#button {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #00daded4;
+  background-image: linear-gradient(90deg, #00daded5 0%, #fb00ffd2 100%);
+  box-shadow: 0px 9px 15px grey;
+  font-family: "Times New Roman", Times, serif;
+}
+.cancel {
+  text-decoration: none;
+  text-align: center;
+}
