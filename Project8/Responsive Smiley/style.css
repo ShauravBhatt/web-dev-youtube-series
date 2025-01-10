@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: grey;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face{
+    background-color: yellow;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eyes{
+    height: 13%;
+    width: 13%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+}
+
+#eye1{
+    top: 20%;
+    left: 25%;
+}
+
+#eye2{
+    top: 20%;
+    right: 25%;
+}
+
+.mouth{
+    height: 15%;
+    width: 40%;
+    background-color: rgb(201, 54, 79);
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
