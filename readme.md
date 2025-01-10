@@ -35,4 +35,4 @@ Combine everything to create real-world full-stack applications!
 1. **Clone the repository**  
    Use the following command to get started:  
    ```bash
-   git clone https://github.com/YourUsername/WebDev-YouTube-Series.git
+   git clone https://github.com/ShauravBhatt/web-dev-youtube-series.git
