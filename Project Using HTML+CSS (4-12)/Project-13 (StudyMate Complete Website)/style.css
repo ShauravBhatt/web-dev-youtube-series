@@ -27,3 +27,91 @@ body {
     width: 100vw;
     font-size: 16px; 
 }
+
+/* Header's Styling Start */
+
+header {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-section-one img {
+  width: 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container span {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 900;
+}
+
+.header-section-two ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-section-two a {
+  color: var(--gray);
+  font-size: large;
+  font-weight: 700;
+}
+
+.header-section-two a:hover {
+  color: var(--link-color);
+}
+
+.header-section-three input[type="button"] {
+  border: none;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: larger;
+  font-weight: 700;
+  transition: all 0.3s 0.1ms linear;
+}
+
+.header-section-three input:hover {
+  background-color: var(--link-color);
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.header-section-four {
+  display: none;
+}
+
+.header-section-four img{
+    width: 40px;
+}
+
+@media (max-width: 899px) {
+  .header-section-three,
+  .header-section-two {
+    display: none;
+  }
+  .header-section-four {
+    display: block;
+  }
+
+  .logo-container span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+/* Header's Styling is Completed */
+
+.first-line{
+    width: 80%;
+    margin: 0 auto;
+}
