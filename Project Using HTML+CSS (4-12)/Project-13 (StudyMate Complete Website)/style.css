@@ -111,7 +111,162 @@ header {
 
 /* Header's Styling is Completed */
 
-.first-line{
-    width: 80%;
-    margin: 0 auto;
+/* Hero Section Styling Started */
+.hero-section {
+  width: 100%;
 }
+
+.hero-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+  animation: heromove 1.5s ease 5ms 1 alternate forwards;
+}
+
+@keyframes heromove {
+  0% {
+    opacity: 0%;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left-container-title {
+  font-size: large;
+  color: var(--link-color);
+  font-weight: 700;
+}
+
+.left-container-heading {
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.left-container-desc {
+  font-size: larger;
+}
+
+.left-container-button-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.left-container-button-box button {
+  border: none;
+  font-size: medium;
+  font-weight: 700;
+  padding: 0.8rem 0.6rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.left-container-start-button {
+  background-color: var(--primary-color);
+}
+
+.left-container-tour-button {
+  background-color: var(--gray);
+}
+
+.right-container {
+  width: 50%;
+}
+
+.right-container img {
+  width: 70%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media (max-width: 700px) {
+  .right-container {
+    display: none;
+  }
+  .left-container {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1111px) {
+  .left-container-title {
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .left-container-heading {
+    font-size: 2.2rem;
+  }
+
+  .left-container-desc {
+    font-size: larger;
+  }
+
+  .left-container-button-box {
+    gap: 1rem;
+    font-size: larger;
+  }
+
+  .left-container-button-box button {
+    padding: 1rem 0.9rem;
+  }
+
+  .left-container{
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .header-section-three,
+  .header-section-two {
+    display: none;
+  }
+  .header-section-four {
+    display: block;
+  }
+
+  .logo-container span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .left-container {
+    gap: 0.6rem;
+  }
+  .left-container-title {
+    font-size: large;
+    font-weight: 600;
+  }
+
+  .left-container-heading {
+    font-size: 1.8rem;
+  }
+
+  .left-container-desc {
+    font-size: medium;
+  }
+
+  .left-container-button-box {
+    gap: 0.5rem;
+  }
+
+  .left-container-button-box button {
+    padding: 0.5rem 0.4rem;
+  }
+}
+
+/* Hero Section Styling Completed */
