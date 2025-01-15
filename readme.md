@@ -13,7 +13,7 @@ The foundation of web pages. Learn all important tags and how to structure conte
 ### 2. CSS  
 The styling part! Understand layouts, colors, animations, and responsive designs to make websites look amazing.  
 
-### 3. JavaScript (Coming Soon)  
+### 3. JavaScript
 Add interactivity to your pages. From simple scripts to advanced functionalities.  
 
 ### 4. Front-End Frameworks (Planned)  
