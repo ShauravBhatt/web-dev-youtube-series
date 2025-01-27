@@ -47,5 +47,5 @@ let value = Boolean(str);
 
 let num12 = 124 ; //number
 let convStr = String(num12) ; //String 
-console.log(typeof convStr);
+console.log(typeof convStr)
 
