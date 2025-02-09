@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Shaurav</title>
+</head>
+<body style="background-color: black; color: white;">
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main-heading";
+    div.id="heading1";
+    div.setAttribute('title',"main heading one");
+    div.style.color="red";
+    div.style.padding="10px";
+    div.style.border="solid px white";
+    div.style.backgroundColor="aliceblue";
+    // div.innerText="Hello this is our first js element";
+    const text = document.createTextNode("Hello this is our First Js element")
+    div.appendChild(text);
+    document.body.appendChild(div);
+</script>
+</html>
