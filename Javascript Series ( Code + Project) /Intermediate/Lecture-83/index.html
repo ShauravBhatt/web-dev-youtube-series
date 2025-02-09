@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM | Shaurav</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ol>
+        <li>Python</li>
+    </ol>
+</body>
+<script>
+
+    // function to add li into ol
+    const ol = document.querySelector('ol')
+    // function addLang(langName) {
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${langName}`;
+    //     ol.appendChild(li);
+    // }
+    function addLang(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        ol.appendChild(li);
+    }
+    addLang("Java");
+    addLang("Js");
+
+    // edit
+    const secondLang = document.querySelector('li:nth-child(2)');
+    // secondLang.innerHTML="JAVA"
+
+    // const newLi = document.createElement('li');
+    // newLi.appendChild(document.createTextNode("JAVA"));
+    // secondLang.replaceWith(newLi);
+
+    // secondLang.outerHTML="<li>LAVA</li>"
+
+    //remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+
+</script>
+</html>
