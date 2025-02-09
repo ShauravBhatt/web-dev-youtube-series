@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Shaurav</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+    <script>
+        const parent = document.querySelector('.week')
+        // console.log(parent)
+        // console.log(parent.children[1].innerText)
+        for (let day = 0; day < parent.children.length; day++) {
+            // console.log(parent.children[day].textContent);
+        }
+        // console.log(parent.firstElementChild)
+        // console.log(parent.lastElementChild)
+        // parent.firstElementChild.style.color = "blue";
+
+        const day = document.querySelector('.day');
+        // console.log(day);
+        // console.log(day.parentElement);
+        // console.log(day.nextElementSibling.innerText)
+
+        // console.log(parent.childNodes)
+    </script>
+</html>
