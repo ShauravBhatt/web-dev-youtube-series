@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Card</title>
+</head>
+<body>
+</body>
+<script>
+    //Styling Body 
+    const body = document.querySelector('body');
+    body.style.height = "100vh";
+    body.style.width = "100vw";
+    body.style.display = "flex";
+    body.style.justifyContent = "center";
+    body.style.alignItems = "center";
+
+    //Creating Wrapper 
+    const wrapper = document.createElement('div');
+    wrapper.id = "wrapper";
+    wrapper.className = "wrapper";
+    wrapper.style.padding = "5px";
+    wrapper.style.border = "solid 2px grey";
+    wrapper.style.borderRadius = "7px";
+    wrapper.style.maxWidth = "225px"
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.gap = "5px";
+
+    //Creating top section of wrapper
+    const topDiv = document.createElement('div');
+    topDiv.style.id = "topSection";
+    topDiv.style.border = "solid 2px grey";
+    const img = document.createElement('img');
+    img.id = "image1";
+    img.setAttribute('src','https://freelogopng.com/images/all_img/1681038325chatgpt-logo-transparent.png');
+    img.style.width = "210px";
+    img.style.objectFit = "cover";
+    img.style.padding = "5px";
+
+    //Creating Bottom Section of Wrapper
+    const bottomDiv = document.createElement('div');
+    bottomDiv.style.id = "bottomSection";
+    bottomDiv.style.textAlign = "center";
+    bottomDiv.style.border = "2px solid grey";
+    bottomDiv.style.padding = "5px";
+    topDiv.style.borderRadius = "7px";
+    const h2 = document.createElement('h2');    
+    h2.appendChild(document.createTextNode('Chatgpt'));
+    h2.style.textDecoration = "underline solid #212121";
+    h2.style.margin = "7px"; 
+    const para = document.createElement('p');
+    para.appendChild(document.createTextNode('ChatGPT is an advanced AI language model developed by OpenAI that can generate human-like text based on the prompts it receives.'));
+
+    //Inserting element into DOM
+    bottomDiv.appendChild(h2);
+    bottomDiv.appendChild(para);
+    bottomDiv.style.borderRadius = "7px";
+    topDiv.appendChild(img);
+    wrapper.appendChild(topDiv);
+    wrapper.appendChild(bottomDiv)
+    document.body.appendChild(wrapper);
+</script>
+</html>
