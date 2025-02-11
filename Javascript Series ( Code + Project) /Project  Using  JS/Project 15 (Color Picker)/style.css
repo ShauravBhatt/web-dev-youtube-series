@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    border: solid 4px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 3px solid grey ;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 15px;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.button-holder{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.button{
+    height: 120px;
+    width: 120px;
+    border: solid 2px black;
+    border-radius: 7px;
+}
+
+#red{
+    background-color: red;
+}
+
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
