@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouseover and Mouseout Event</title>
+    <style>
+      #box {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        transition: all 0.5s linear 1ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Hover On Me...</div>
+  </body>
+  <script>
+    const box = document.querySelector("#box");
+
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = "pink";
+      box.textContent = `Hovering on me...`;
+    });
+
+    box.addEventListener("mouseout", () => {
+      box.style.backgroundColor = "red";
+      box.textContent = `Hover On Me...`;
+    });
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Event</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: <input type="text" id="name"></label>
+        <br><br>
+        <label for="email">Email: <input type="email" id="email"></label>
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+    <p id="output"></p>
+</body>
+<script>
+    const form = document.querySelector('form');
+    const output  = document.querySelector('#output');
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+
+        output.textContent = `Welcome ${name}, You logged in with ${email}`;
+    })
+</script>
+</html>

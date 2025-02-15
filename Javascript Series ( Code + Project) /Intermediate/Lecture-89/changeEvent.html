@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event</title>
+</head>
+<body>
+    <form>
+        <label for="color">Select color: 
+            <select id="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </label>
+    </form>
+    <p id="output"></p>
+</body>
+    <script>
+        const colorSelect = document.querySelector('#color');
+        const output = document.querySelector('#output');
+
+        colorSelect.addEventListener('change',function () {
+            output.textContent = `You Select : ${colorSelect.value}`;
+        })
+    </script>
+</html>

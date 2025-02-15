@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus & blur Event</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: <input type="text" id="name"></label>
+        <br><br>
+        <label for="email">Email: <input type="email" id="email"></label>
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+    <p id="output"></p>
+</body>
+<script>
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const output  = document.querySelector('#output');
+
+    name.addEventListener('focus',()=>{
+        output.textContent = `Name field is in Focus !!`;
+    })
+
+    name.addEventListener('blur',()=>{
+        output.textContent = `Name field is out of Focus !!`;
+    })
+
+    email.addEventListener('focus',(e)=>{
+        console.log(e.srcElement.type);
+        output.textContent = `Email field is in Focus !!`;
+    })
+
+    email.addEventListener('blur',()=>{
+        output.textContent = `Email field is out of Focus !!`;
+    })
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Up & Key Down Event</title>
+</head>
+<body>
+    <form>
+        <label for="type">Type Something: <input type="text" id="type"></label>
+    </form>
+    <p id="output"></p>
+</body>
+<script>
+    const input = document.querySelector('#type');
+    const output = document.querySelector('#output');
+
+    input.addEventListener('keydown',(e)=>{
+        output.textContent=`Key Pressed: ${e.key}`;
+    })
+
+    input.addEventListener('keyup',(e)=>{
+        output.textContent=`Key Released: ${e.key}`;
+    })
+</script>
+</html>
