@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #414141;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    text-align: center;
+    padding: 1rem;
+    border: solid 2px aliceblue;
+    border-radius: 7px;
+}
+
+button{
+    font-size: medium;
+    font-weight: 800;
+    border: none;
+    border-radius: 3px;
+    padding:0.3rem 0.4rem ;
+    margin: 0 0.4rem;
+}
+
+#value{
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 2px aliceblue;
+}
+
+.hidden{
+    display: none !important;
+}
