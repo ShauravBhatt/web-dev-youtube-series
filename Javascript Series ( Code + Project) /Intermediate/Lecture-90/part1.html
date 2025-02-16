@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body>
+    <div id="outer">
+        I am Outer Div !!
+        <div id="inner">
+            I am Inner Div !!
+        </div>
+    </div>
+</body>
+    <script>
+        const outer = document.querySelector('#outer')
+        const inner = document.querySelector('#inner')
+
+        outer.addEventListener('click',function (e) {
+            // e.stopPropagation();
+            console.log('Outer Div Clicked');            
+        },true);
+
+        inner.addEventListener('click',function (e) {
+            // e.stopPropagation();
+            console.log('Inner Div Clicked');            
+        },true);
+    </script>
+</html>
