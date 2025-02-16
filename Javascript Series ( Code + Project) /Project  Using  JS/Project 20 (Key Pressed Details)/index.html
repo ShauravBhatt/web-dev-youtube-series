@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Pressed Details</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #414141;
+            color: azure;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+
+        table{
+            font-size: larger;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Press Any Key to Watch Magic !!</h1>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="key-details">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    const keyDetails = document.querySelector('#key-details').children;
+    
+    document.addEventListener('keydown',(e)=>{
+        keyDetails[0].innerText = `${e.key}`;
+        keyDetails[1].innerText = `${e.keyCode}`;
+        keyDetails[2].innerText = `${e.code}`;
+})
+</script>
+</html>
