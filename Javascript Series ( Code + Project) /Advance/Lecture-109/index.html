@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scoping and Closures</title>
+  </head>
+  <body style="background-color: black">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+
+  <script>
+    // function init() {
+    //   let name = "Mozilla";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   displayName();
+    // }
+    // // displayName();
+    // init();
+
+    // function parent() {
+    //     let money = 1000;
+    //     function child(){
+    //         let toy = "elephant";
+    //         console.log(money);
+    //     }
+    //     function child1() {
+    //         console.log(money);
+    //         // console.log(toy);
+    //     }
+    //     child();
+    //     child1();
+    //     // console.log(toy);
+    // }
+    // parent();
+  </script>
+
+  <script>
+    // function makeFunc() {
+    //   const name = "Shaurav";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   return displayName;
+    // }
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    // function User(){
+    //     let email = "bhatt@gmail.com";
+    //     function display() {
+    //         console.log(email);
+    //     }
+    //     return display;
+    // }
+    // let u1 = User();
+    // u1();
+  </script>
+
+  <script>
+    // document.querySelector('#green').onclick = function () {
+    //     document.body.style.backgroundColor = `green`;
+    // }
+
+    // document.querySelector('#orange').onclick = function () {
+    //     document.body.style.backgroundColor = `orange`;
+    // }
+
+    function clickHandle(color) {
+      // document.body.style.backgroundColor = `${color}`;
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    document.querySelector("#green").onclick = clickHandle("green");
+    document.querySelector("#orange").onclick = clickHandle("orange");
+
+    // document.querySelector('#green').onclick = ()=>clickHandle("green");
+    // document.querySelector('#orange').onclick = ()=>clickHandle("orange");
+  </script>
+</html>
