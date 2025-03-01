@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1{
+    margin-bottom: 6px;
+}
+
+header img{
+    background-color: white;
+    border-radius: 7px;
+    width: 2.3rem;
+    object-fit: cover;    
+    padding-left: 3px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    padding-bottom: 2px ;
+}
+
+footer hr{
+    margin-bottom: 3px;
+}
+
+.row{
+    display: flex;
+
+}
+
+.box{
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+
+.top-left{
+    border-right:solid 5px white;
+    border-bottom:solid 5px white;
+}
+
+.top-middle{
+    border-right:solid 5px white;
+    border-bottom:solid 5px white;
+}
+
+.top-right{
+    border-bottom:solid 5px white;
+}
+
+.medium-left{
+    border-right:solid 5px white;
+    border-bottom:solid 5px white;
+}
+
+.medium-middle{
+    border-right:solid 5px white;
+    border-bottom:solid 5px white;
+}
+
+.medium-right{
+    border-bottom:solid 5px white;
+}
+
+.bottom-middle{
+    border-right:solid 5px white;
+}
+
+.bottom-left{
+    border-right:solid 5px white;
+}
+
+#message-container{
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#button-container{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#button-container button{
+    font-size: large;
+    font-weight: 700;
+    padding: 0.2rem 0.4rem;
+    border:none;
+    border-radius: 3px;
+}
+
+#button-container button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid aliceblue;
+}
+
+@media (min-width: 10px) and (max-width: 200px) {
+    .box {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+    #game-container {
+      margin-top: 3rem;
+    }
+    #message-container {
+      margin-top: 2rem;
+    }
+  }
+
+@media (min-width: 201px) and (max-width: 299px) {
+    .box {
+      height: 4rem;
+      width: 4rem;
+    }
+    #game-container {
+      margin-top: 3rem;
+    }
+    #message-container {
+      margin-top: 2rem;
+    }
+  }
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .box {
+    height: 6rem;
+    width: 6rem;
+  }
+  #game-container {
+    margin-top: 3rem;
+  }
+  #message-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1000px){
+    .box {
+      height: 8rem;
+      width: 8rem;
+    }
+    #game-container {
+      margin-top: 3rem;
+    }
+    #message-container {
+      margin-top: 2rem;
+    }
+  }
+
+.hidden{
+  display: none;
+}
+
+.winner{
+  background-color: #4B636E;
+  border: 2px solid #78909C;
+}

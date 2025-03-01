@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuXWr3D04zHZyH9tUeQX4G3X1fw2ohCIngg&s"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          class="unmute-png"
+          src="https://img.icons8.com/?size=100&id=644&format=png&color=000000"
+          alt="unmute button"
+        />
+        <h1>Tic-Tac-Toe</h1>
+      </div>
+      <hr />
+    </header>
+    <main>
+        <section id="game-container">
+            <div class="row">
+                <div class="box top-left"><span class="boxtext"></span></div>
+                <div class="box top-middle"><span class="boxtext"></span></div>
+                <div class="box top-right"><span class="boxtext"></span></div>
+            </div>
+            <div class="row">
+                <div class="box medium-left"><span class="boxtext"></span></div>
+                <div class="box medium-middle"><span class="boxtext"></span></div>
+                <div class="box medium-right"><span class="boxtext"></span></div>
+            </div>
+            <div class="row">
+                <div class="box bottom-left"><span class="boxtext"></span></div>
+                <div class="box bottom-middle"><span class="boxtext"></span></div>
+                <div class="box bottom-right"><span class="boxtext"></span></div>
+            </div>
+        </section>
+        <section id="message-container">
+            <div>
+                <h3 id="result-message"></h3>
+            </div>
+            <div>
+                <h3>Turn: <span id="turn-message">X</span></h3>
+            </div>
+        </section>
+        <section id="button-container">
+            <button id="restart-button">Restart</button>
+        </section>
+    </main>
+    <footer>
+        <hr/>
+        © 2024 Tic-Tac-Toe Game. All rights reserved. By Shaurav
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
