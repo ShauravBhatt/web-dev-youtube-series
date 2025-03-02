@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 450px; /* Increased width */
+  max-height: 80%; /* Allow the container to grow */
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; /* Column layout */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff; /* Header color */
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: space-between; /* Inputs in a row */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 10px; /* Space between inputs */
+}
+
+input[type="text"],
+input[type="number"] {
+  flex: 1; /* Flexible inputs */
+  padding: 10px; /* Reduced padding */
+  background-color: #333333;
+  border: 1px solid #6200ea;
+  border-radius: 8px;
+  color: #ffffff;
+  outline: none;
+  font-size: 1rem;
+  min-width: 120px; /* Minimum width */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3700b3;
+}
+
+button {
+  padding: 10px; /* Reduced padding */
+  background-color: #6200ea;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+#expense-list {
+  list-style-type: none;
+  padding: 5px;
+  max-height: 200px; /* Keeps it manageable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 15px;
+}
+
+#expense-list li {
+  background-color: #333333;
+  padding: 8px; /* Reduced padding for list items */
+  margin-bottom: 8px; /* Reduced margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+#expense-list li:hover {
+  transform: translateY(-2px);
+}
+
+#total {
+  margin-top: 15px; /* Push total to the bottom */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Custom scrollbar styles */
+#expense-list::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+#expense-list::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#expense-list::-webkit-scrollbar-thumb {
+  background: #6f6d70; /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#expense-list::-webkit-scrollbar-thumb:hover {
+  background: #a7a5a8; /* Thumb color on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    margin: 0 10px; /* Center on small screens */
+  }
+
+  form {
+    flex-direction: column; /* Stack inputs on small screens */
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+footer {
+  background-color: #1e1e1e; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 5px; 
+  width: 100%;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); 
+  position: absolute; /* Changed to relative for proper positioning */
+  bottom : -0;                                                                                                                                                                                                    
+}
+
+.footer-content p {
+  margin: 5px 0; 
+  font-size: 14px; 
+}
