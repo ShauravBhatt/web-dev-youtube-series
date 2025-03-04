@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nextBtn.classList.add("hidden");
     questionText.textContent = questions[currentQuestionIndex].question;
     choicesList.innerHTML = "";
+    choicesList.dataset.answered = "false";
     questions[currentQuestionIndex].choices.forEach((choice)=>{
         const li = document.createElement('li');
         li.innerText = choice;
@@ -82,9 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
     option.forEach((option) => (option.classList.remove("selected")))
     e.target.classList.add("selected");
     const correctAnswer = questions[currentQuestionIndex].answer;
-    if(choice === correctAnswer){
-        score++;
+    if (choice === correctAnswer && choicesList.dataset.answered !== "true") {
+      score++;
     }
+    choicesList.dataset.answered = "true"; 
     nextBtn.classList.remove("hidden");
 }
 
