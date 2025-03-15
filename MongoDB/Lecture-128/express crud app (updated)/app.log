@@ -1,0 +1,14 @@
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"21.112"}
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"0.713"}
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"0.966"}
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"0.847"}
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"0.786"}
+[info]: {"method":"GET","url":"/students","status":"200","responseTime":"0.739"}
+[info]: {"method":"GET","url":"/students/2","status":"200","responseTime":"22.318"}
+[info]: {"method":"GET","url":"/students/3","status":"200","responseTime":"7.172"}
+[info]: {"method":"PUT","url":"/students/2","status":"200","responseTime":"1.386"}
+[info]: {"method":"DELETE","url":"/students/2","status":"200","responseTime":"1.042"}
+[info]: Data is added !
+[info]: {"method":"POST","url":"/students","status":"200","responseTime":"28.283"}
+[warn]: Data is deleted
+[info]: {"method":"DELETE","url":"/students/1","status":"200","responseTime":"3.207"}
