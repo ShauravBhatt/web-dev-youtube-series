@@ -37,11 +37,10 @@ const userSchema = new Schema({
   ],
   password: {
     type: String,
-    reqired: [true , "Invalid Password !!"]
+    required: [true , "Invalid Password !!"]
   },
   refreshToken: {
-    type: String,
-    required: true,
+    type: String
   },
 } , {timestamps : true}
 );
@@ -61,7 +60,7 @@ userSchema.methods.generateAccessToken = function(){
     {
       _id: this._id ,
       email: this.email,
-      fullname : this.name
+      fullname : this.fullname
     },
     process.env.ACCESS_TOKEN_SECRET,
     {expiresIn: process.env.ACCESS_TOKEN_EXPIRY}
