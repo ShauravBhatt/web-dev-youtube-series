@@ -7,6 +7,27 @@ import {
   deleteFromCloudinary,
 } from "../utils/cloudinary.js";
 
+const generateAccessandRefreshTokens = async (userId) => {
+  try {
+    const user = await User.findById(userId);
+  
+    if(!user){
+      throw new ApiError(404 , "User Not Found !!");
+    }
+  
+    const accessToken = user.generateAccessToken();
+    const refreshToken = user.generateRefreshToken();
+  
+    user.refreshToken = refreshToken;
+  
+    await user.save({validateBeforeSave : false});
+  
+    return {accessToken , refreshToken};
+  } catch (error) {
+    throw new ApiError(500 , "Something went wrong while generating the access and refresh tokens !!");
+  }
+}
+
 const registerUser = asyncHandler(async (req, res) => {
   const { fullname, username, email, password } = req.body;
 
@@ -91,4 +112,50 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
-export { registerUser };
+const loginUser = asyncHandler(async (req , res) => {
+  const {username, email , password} = req.body;
+  
+  if (!email || !password){
+    throw new ApiError(400,"All fields are required for login !!");
+  }
+
+  const user = await User.findOne({
+    $or: [{email} , {username}]
+  })
+
+  if(!user){
+    throw new ApiError(404, "User Not Found !!");
+  }
+
+  const isPasswordValid = await user.comparePassword(user._id);
+
+  if(!isPasswordValid){
+    throw new ApiError(401 , "Invalid User Credentials !!");
+  }
+
+  const {accessToken , refreshToken} = await user.generateAccessandRefreshTokens();
+
+  const loggedInUser = await User.findById(user._id).select(
+    "-password -refreshToken"
+  );
+
+  if(!loggedInUser){
+    throw new ApiError(404 , "Something went wrong, user data not found in database !!");
+  }
+
+  const options = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production"
+  }
+
+  return res
+    .status(200)
+    .cookie("accessToken" , accessToken , options)
+    .cookie("refreshToken" , refreshToken , options)
+    .jsons(new ApiResponse(
+      200  
+      , {user: loggedInUser , accessToken , refreshToken}
+      , "User Logged In Successfully !!"))
+});
+
+export { registerUser , loginUser };
