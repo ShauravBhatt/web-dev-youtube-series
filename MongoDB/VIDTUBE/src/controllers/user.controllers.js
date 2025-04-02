@@ -206,4 +206,27 @@ const refreshAccessToken = asyncHandler( async (req,res) => {
   }
 })
 
-export { registerUser , loginUser , refreshAccessToken };
+const userLogout = asyncHandler( async (req,res) => {
+  await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $set: {
+        refreshToken: undefined
+      }
+    },
+    {new: true}
+  );
+
+  const options = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production"
+  }
+
+  return res  
+    .status(200)
+    .clearCookies("accessToken" , options)
+    .clearCookies("refreshToken" , options)
+    .json(200 , {} , "User Logged Out Successfully !!")
+});
+
+export { registerUser , loginUser , refreshAccessToken , userLogout};
