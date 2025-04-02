@@ -6,6 +6,7 @@ import {
   uploadToCloudinary,
   deleteFromCloudinary,
 } from "../utils/cloudinary.js";
+import jwt from "jsonwebtoken";
 
 const generateAccessandRefreshTokens = async (userId) => {
   try {
@@ -158,4 +159,51 @@ const loginUser = asyncHandler(async (req , res) => {
       , "User Logged In Successfully !!"))
 });
 
-export { registerUser , loginUser };
+const refreshAccessToken = asyncHandler( async (req,res) => {
+  const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken ;
+
+  if(!incomingRefreshToken){
+    throw new ApiError(401, "Refresh Token Is Required !!");
+  }
+
+  try {
+    const decodeToken = jwt.verify(
+      incomingRefreshToken , 
+      process.env.REFRESH_TOKEN_SECRET
+    );
+
+    const user = await User.findById(decodeToken?._id);
+
+    if(!user){
+      throw new ApiError(401 , "Invalid Refresh Token");
+    }
+
+    if(incomingRefreshToken !== user?.refreshToken){
+      throw new ApiError(401, "Invalid Refresh Token");
+    }
+
+    const options = {
+      httpOnly : true,
+      secure: process.env.NODE_ENV === "production"
+    }
+
+    const {accessToken , refreshToken: newRefreshToken} = await generateAccessandRefreshTokens(user._id);
+
+    return res
+      .status(200)
+      .cookie("accessToken", accessToken, options)
+      .cookie("refreshToken", newRefreshToken, options)
+      .jsons(
+        new ApiResponse(
+          200,
+          {accessToken , refreshToken: newRefreshToken },
+          "Access Token Refreshed Successfully !!"
+        )
+      );
+      
+  } catch (error) {
+    throw new ApiError(500 , "Something went wrong while refreshing the access token !!");
+  }
+})
+
+export { registerUser , loginUser , refreshAccessToken };
